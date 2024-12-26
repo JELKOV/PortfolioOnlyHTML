@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!--header-->
+    <header>
+        <div class="header-container">
+            <div class="title-section">
+                <h1>안제호 Portfolio</h1>
+                <p><em><strong>Full-Stack</strong> Developer</em></p>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="skills.html">기술 및 경험</a></li>
+                        <li><a href="projects.html">프로젝트</a></li>
+                        <li><a href="contact.html">연락처</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="image-section">
+                <img src="images/AJH사진.jpg" alt="안제호 프로필 사진">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact">
+            <h1>📞 연락처</h1>
+            <div class="contact-info">
+                <p><strong>📱 전화:</strong> 010-6273-4585</p>
+                <p><strong>📧 이메일:</strong> <a href="mailto:ajh4234@gmail.com">ajh4234@gmail.com</a></p>
+            </div>
+
+            <h2>✉️ 메일 보내기</h2>
+            <form action="mailto:ajh4234@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                <div class="form-group">
+                    <label for="name">이름:</label>
+                    <input type="text" id="name" name="yourname" placeholder="이름을 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일:</label>
+                    <input type="email" id="email" name="youremail" placeholder="이메일 주소를 입력하세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">메세지:</label>
+                    <textarea id="message" name="yourMessage" rows="5" placeholder="메세지를 입력하세요" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">보내기</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
