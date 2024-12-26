@@ -37,7 +37,7 @@
             </div>
 
             <h2>✉️ 메일 보내기</h2>
-            <form action="mailto:ajh4234@gmail.com" method="post" enctype="text/plain" class="contact-form">
+            <form action="mailto:ajh4234@gmail.com" method="get" enctype="text/plain" onsubmit="return encodeMailto(this)">
                 <div class="form-group">
                     <label for="name">이름:</label>
                     <input type="text" id="name" name="yourname" placeholder="이름을 입력하세요" required>
@@ -52,6 +52,18 @@
                 </div>
                 <button type="submit" class="btn-submit">보내기</button>
             </form>
+            <script>
+                function encodeMailto(form) {
+                    const name = encodeURIComponent(form.yourname.value);
+                    const email = encodeURIComponent(form.youremail.value);
+                    const message = encodeURIComponent(form.yourMessage.value);
+            
+                    const mailtoLink = `mailto:ajh4234@gmail.com?subject=${name}&body=이름: ${name}%0A이메일: ${email}%0A메세지:%0A${message}`;
+                    window.location.href = mailtoLink;
+            
+                    return false; // 폼의 기본 전송 동작을 방지
+                }
+            </script>
         </section>
     </main>
 </body>
